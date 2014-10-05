@@ -97,7 +97,7 @@ def zero_email_sent
 end
 ```
 
-Note that failing the context in a before hook will prevent `#call` to be performed.
+**Note that failing the context in a before hook will prevent `#call` to be performed.**
 
 #### After Hooks
 
