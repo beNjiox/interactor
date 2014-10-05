@@ -124,7 +124,7 @@ after do
 end
 ```
 
-**NOTE:** An interactor can define multiple before/after hooks, allowing common
+**NOTE:** An interactor can define [multiple before/after hooks](https://github.com/beNjiox/interactor/wiki/multiple-hooks), allowing common
 hooks to be extracted into interactor concerns.
 
 ### An Example Interactor
