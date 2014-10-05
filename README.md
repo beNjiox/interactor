@@ -97,7 +97,21 @@ def zero_email_sent
 end
 ```
 
-**Note that failing the context in a before hook will prevent `#call` to be performed.**
+Note that failing the context in a before hook will prevent `#call` to be performed.
+
+```ruby
+before do
+  context.user = User.new(context.params)
+  
+  context.fail! if context.user.invalid?
+end
+
+def call
+  # Won't be call if the hook failed
+  
+  context.user.save!
+end
+```
 
 #### After Hooks
 
